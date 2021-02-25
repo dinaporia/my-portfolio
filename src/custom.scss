@@ -1,0 +1,88 @@
+// theme colors
+$primary: #1178a9;
+$accent: #f74c8d;
+$secondary: #ffa693;
+$dark:#1a1a1a;
+$medium: #242424;
+$light: #333333;
+$trans-box: rgba(0, 0, 0, 0.3);
+
+
+$theme-colors: (
+    "secondary": $secondary,
+    "accent": $accent,
+    "dark": $dark,
+    "medium": $medium,
+    "light": $light,
+);
+
+
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+html, body, #root {
+    height: 100%;
+  }
+
+#nav-container {
+    position: fixed;
+    top: 20px;
+    z-index: 1020;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+// center toggle button
+.nav-dropdown {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+// remove bootstrap's dropdown arrow
+.dropdown-toggle::after {
+    display: none;
+}
+
+#nav-header-toggle {
+    position: fixed;
+    top: 10px;
+    text-align: center;
+    margin: auto;
+    display: block;
+    color: $secondary;
+    font-weight: bolder;
+    font-size: 1.7em;
+    border-radius: 50%;
+    border: $secondary 1px solid;
+    padding: 15px;
+    // mute color when not in focus
+    &:not(:hover) {
+        opacity: 0.5;
+    }
+}
+
+
+.drop-menu {
+    position: fixed;
+    top: 60px;
+    background: $secondary;
+    display: flex;
+    padding: 3px 0;
+    border-radius: 15px;
+    min-width: 60%;
+    text-align: center;
+    
+
+}
+
+a.dropdown-item {
+    font-variant-caps: all-small-caps;
+    font-size: 1.2em;
+    &:hover {
+        background-color: transparent;
+        color: $primary;
+    }
+}
