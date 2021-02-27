@@ -5,7 +5,7 @@ const theme = {
     colors:{
         dark: '#1a1a1a',
         medium: '#242424',
-        light: '#333333',
+        light: '#616161',
 
     },
     fonts: ['sand-serif', 'Roboto'],

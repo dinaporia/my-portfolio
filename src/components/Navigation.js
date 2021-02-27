@@ -5,12 +5,13 @@ import About from './AboutPage';
 import Home from './HomePage';
 import Contact from './ContactPage';
 import Projects from './ProjectsPage';
+import NavHeader from './common/NavHeader';
 
 const Navigation = () => {
-    return (
-        <Fragment>
 
-            <div className="container-fluid h-100 ">
+    return (
+        <div className="container-fluid h-100 ">
+            <NavHeader />
             <Switch>
                 <Route path='/home'>
                     <Home />                
@@ -27,7 +28,6 @@ const Navigation = () => {
                 <Redirect to='/home' />
             </Switch>
         </div>
-        </Fragment>
     );
 }
 

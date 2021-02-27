@@ -1,10 +1,10 @@
 // theme colors
 $primary: #1178a9;
-$accent: #f74c8d;
+$accent: #f8ef72;
 $secondary: #ffa693;
 $dark:#1a1a1a;
 $medium: #242424;
-$light: #333333;
+$light: #616161;
 $trans-box: rgba(0, 0, 0, 0.3);
 
 
@@ -16,7 +16,10 @@ $theme-colors: (
     "light": $light,
 );
 
-
+$spacers: (
+    6: 5rem,
+    7: 6rem
+);
 
 @import '~bootstrap/scss/bootstrap.scss';
 
@@ -24,20 +27,22 @@ html, body, #root {
     height: 100%;
   }
 
+//   NAVIGATION MENU STYLING
 #nav-container {
     position: fixed;
+    right: 0;
+    left: 0;
     top: 20px;
     z-index: 1020;
     max-width: 100%;
     display: flex;
-    align-items: center;
-
 }
 
 // center toggle button
 .nav-dropdown {
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
+
     display: flex;
 }
 
@@ -58,31 +63,101 @@ html, body, #root {
     border-radius: 50%;
     border: $secondary 1px solid;
     padding: 15px;
+    cursor: pointer;
     // mute color when not in focus
     &:not(:hover) {
         opacity: 0.5;
     }
 }
 
-
 .drop-menu {
     position: fixed;
-    top: 60px;
+    top: 30px;
     background: $secondary;
     display: flex;
     padding: 3px 0;
     border-radius: 15px;
     min-width: 60%;
     text-align: center;
+    justify-content: center;
+    a {
+        font-variant-caps: all-small-caps;
+        font-size: 1.2em;
+        color: $dark;
+        width: 100%;
+        padding: 0.25rem 1.5rem;
+        clear: both;
+        font-weight: 400;
+        white-space: nowrap;
+        text-decoration: none;
+        &:hover {
+            background-color: transparent;
+            color: $accent;
+        }
+        &.active {
+            color: $primary;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .nav-dropdown {
+        justify-content: center;
+    }
+    .drop-menu {
+        top: 60px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .drop-menu {
+        left: 80px;
+    }
+}
+
+// COMMON STYLING
+.wrapped-text {
+    font-size: 1.2em;
+    text-align: center;
+    color: white;
+    margin: auto 2em;
     
 
 }
 
-a.dropdown-item {
-    font-variant-caps: all-small-caps;
-    font-size: 1.2em;
-    &:hover {
-        background-color: transparent;
-        color: $primary;
+.wrapped-title {
+    font-size: 2em;
+    text-align: center;
+    color: #f0f8ff;
+    margin: 1em;
+}
+
+.about-title-one {
+    font-size: 2em;
+    color: $dark;
+    align-self: flex-end;
+}
+.about-title-two {
+    font-size: 2em;
+    color: $light;
+    align-self: flex-start;
+}
+
+.about-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100%;
+}
+
+.profile-image {
+    display: block;
+    margin: auto;
+    width: 50%;
+    // border-radius: 30%;
+}
+
+@media only screen and (min-width: 992px) {
+    .profile-image {
+        width: 75%;
     }
 }
