@@ -20,14 +20,14 @@ const NavHeader = (props) => {
                 >
                     DM
                 </Dropdown.Toggle>
-                {showMenu && 
-                <div className="drop-menu" onClick={() => setShowMenu(!showMenu)}>
+               
+                <div className={`drop-menu ${(showMenu)? 'open' : ''}`} onClick={() => setShowMenu(!showMenu)}>
                     <NavLink className='w-50' to="/home" ><i className='fa fa-lg fa-home' /></NavLink>
                     <NavLink to="/about" >About</NavLink>
                     <NavLink to="/projects" >Projects</NavLink>
                     <NavLink to="/contact" >Contact</NavLink>
                 </div>
-                }     
+   
             </Dropdown>
         </Container>
         

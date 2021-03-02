@@ -70,6 +70,8 @@ html, body, #root {
     }
 }
 
+
+
 .drop-menu {
     position: fixed;
     top: 30px;
@@ -77,25 +79,36 @@ html, body, #root {
     display: flex;
     padding: 3px 0;
     border-radius: 15px;
-    min-width: 60%;
     text-align: center;
     justify-content: center;
-    a {
+    width: 0;
+    transition: width 2s;
+    overflow: hidden;
+    a { 
+        width: 100%;
         font-variant-caps: all-small-caps;
         font-size: 1.2em;
         color: $dark;
-        width: 100%;
         padding: 0.25rem 1.5rem;
         clear: both;
         font-weight: 400;
         white-space: nowrap;
         text-decoration: none;
+        transform: translate(-200px);
+        transition: transform 2s;
         &:hover {
             background-color: transparent;
             color: $accent;
         }
         &.active {
             color: $primary;
+        }
+    }
+    &.open {
+        width: 60%;  
+        a {
+            transform: translate(0, 0);
+            transition: transform 2s;
         }
     }
 }
@@ -106,6 +119,9 @@ html, body, #root {
     }
     .drop-menu {
         top: 60px;
+        a {
+            transform: translate(0, -75px);
+        }
     }
 }
 
