@@ -15,6 +15,7 @@ const NavHeader = (props) => {
                 <Dropdown.Toggle 
                     as="div" 
                     id="nav-header-toggle" 
+                    className="d-none d-sm-block"
                     onMouseEnter={() => setShowMenu(true)}
                     onClick={() => props.history.push('/home')}
                 >

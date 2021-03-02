@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { Image } from 'react-bootstrap';
 
 
-const About = (props) => {
+const About = () => {
     return (
         <Fragment>
              <div className="row h-100">
