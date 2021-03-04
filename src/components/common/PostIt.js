@@ -25,8 +25,8 @@ const PostIt = ({color, title, text}) => {
                     {title}
                 </h4>
                 <ul className='postit-bullets'>
-                    {text.map(item => {
-                        return <li><i className='fa fa-check mr-2'/>{item}</li>
+                    {text.map((item, index) => {
+                        return <li key={index}><i className='fa fa-check mr-2'/>{item}</li>
                     })}
                 </ul>
                 

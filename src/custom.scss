@@ -193,6 +193,38 @@ html, body, #root {
     padding-left: 20px;
 }
 
+// PROJECT BOARD STYLING
+.project-card {
+    position: relative;
+    padding: 0;
+}
+.project-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    &:hover {
+        opacity: 0.5;
+    }
+}
+.project-card-overlay {
+    flex-wrap: wrap;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &.show {
+       visibility: visible;
+    }
+}
+
+
+
 // COMMON STYLING
 .wrapped-text {
     font-size: 1.2em;

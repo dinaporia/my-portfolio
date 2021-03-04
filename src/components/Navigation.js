@@ -10,7 +10,7 @@ import NavHeader from './common/NavHeader';
 const Navigation = () => {
 
     return (
-        <div className="container-fluid h-100 ">
+        <div className="container-fluid h-100">
             <NavHeader />
             <Switch>
                 <Route path='/home'>
