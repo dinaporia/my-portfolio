@@ -9,16 +9,21 @@ const Projects = (props) => {
     const smarTask = {
         green: {
             title: "Features",
-            text: ['clickable', 'fast', 'this', 'that']
+            text: ['Add detailed tasks', 'Personalize preferences', 'Sort and filter tasks', 'Automatically generated daily schedule']
         },
         yellow: {
             title: 'Technologies',
-            text: ['React Native', 'Redux Toolkit', 'Expo SDK']
+            text: ['React Native', 'Redux Toolkit', 'React Animatable', 'Expo SDK']
         },
         blue: {
             title: 'Plans',
-            text: ['Scheduling', 'Server']
-        }
+            text: ['Appointment scheduling', 'Recurring Tasks', 'User-defined categories']
+        },
+        images: [
+            { src: 'images/smartask-slides/addtask.png', alt: 'Add a new task'},
+            { src: 'images/smartask-slides/detailtask.png', alt: 'Add task details'},
+            { src: 'images/smartask-slides/list.png', alt: 'View task list'},
+        ]
     };
 
 
