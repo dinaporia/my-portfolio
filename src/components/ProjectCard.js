@@ -2,14 +2,11 @@ import React, { useState } from 'react';
 import { Card } from 'react-bootstrap';
 
 
-
 const ProjectCard = (props) => {
-    const { header, subTitle, image, code, demo, details, html = false, sass = false, css = false, bootstrap = false, js = false, react = false, reactNative = false} = props;
-
+    const { header, subTitle, image, code, demo, details, 
+        html = false, sass = false, css = false, bootstrap = false, js = false, react = false, reactNative = false} = props;
 
     const [ showText, setShowText ] = useState(false);
-
-
 
     return (
         <Card className="text-center h-100">
@@ -18,36 +15,36 @@ const ProjectCard = (props) => {
                 <h6 className='text-muted'>{subTitle}</h6>
             </Card.Header>
             <Card.Body className='project-card' onMouseEnter={() => setShowText(true)} onMouseLeave={() => setShowText(false)} >
-                <div className={`project-card-overlay ${(showText)? 'show' : ''}`}>
+                <div className={`project-card-overlay row row-cols-4 row-cols-md-2 ${(showText)? 'show' : ''}`}>
                     {html &&
-                        <i className='fab fa-3x fa-html5 p-sm-1 p-md-0' />
+                        <i className='fab fa-4x fa-html5 col' />
                     }
                     {css && 
-                        <i className='fab fa-3x fa-css3' />
+                        <i className='fab fa-4x fa-css3 col' />
                     }
                     {sass &&
-                        <i className='fab fa-3x fa-sass' />
+                        <i className='fab fa-4x fa-sass col' />
                     }
                     {bootstrap && 
-                        <i className='fab fa-3x fa-bootstrap' />
+                        <i className='fab fa-4x fa-bootstrap col' />
                     } 
                     {js && 
-                        <i className='fab fa-3x fa-js-square' />
+                        <i className='fab fa-4x fa-js-square col' />
                     } 
                     {react && 
-                        <i className='fab fa-3x fa-react' />
+                        <i className='fab fa-4x fa-react col' />
                     } 
                     {reactNative && 
-                        <i className='fab fa-3x fa-react-native' />
+                        <i className='fab fa-4x fa-react-native col' />
                     }                
                 </div>
                 <img className="project-card-image" src={image.url} alt={image.alt}/>
             </Card.Body>
         
-            <Card.Footer>
-                <Card.Link href={code}>Code</Card.Link>
-                <Card.Link href={demo}>Demo</Card.Link>
-                <Card.Link href={details}>Details</Card.Link>
+            <Card.Footer className='d-flex justify-content-around p-0'>
+                <Card.Link href={code}>CODE</Card.Link>
+                <Card.Link href={demo}>DEMO</Card.Link>
+                <Card.Link href={details}>DETAILS</Card.Link>
             </Card.Footer>
         </Card>
 

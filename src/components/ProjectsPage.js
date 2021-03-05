@@ -24,10 +24,11 @@ const Projects = (props) => {
 
 
     return (
-        <div className='bg-dark row pt-5'>
+        <div className='bg-dark row py-7 px-2'>
             <div className='col-12 p-5'>
                 <ProjectBoard 
                     project={smarTask}
+                    featured
                 />
             </div>
             <div className='col-12 col-md-4 p-5 p-md-3'>
@@ -44,7 +45,7 @@ const Projects = (props) => {
             <div className='col-12 col-md-4 p-5 p-md-3'>
                 <ProjectCard 
                     header="You Don't Know Film!"
-                    subTitle='Jeopardy!-style Film Trivia Game'
+                    subTitle='Jeopardy-style Trivia Game'
                     image={{url: 'images/placeholder.png', alt: 'cinema'}}
                     html css js
                     code='#'
@@ -54,7 +55,7 @@ const Projects = (props) => {
             </div>
             <div className='col-12 col-md-4 p-5 p-md-3'>
                 <ProjectCard 
-                        header="Dina's Portfolio Page"
+                        header="This Very Site"
                         subTitle="Responsive Single Page App"
                         image={{url: 'images/placeholder.png', alt: 'cinema'}}
                         react sass bootstrap js
