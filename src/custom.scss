@@ -86,7 +86,6 @@ html, body, #root {
     }
 }
 
-
 .drop-menu {
     position: fixed;
     top: 0;
@@ -255,6 +254,19 @@ html, body, #root {
     }
 }
 
+.card-footer a.card-link {
+    width: 100%;
+    height: 100%;
+    padding: 0.75rem 0;
+    color: $dark;
+    font-weight: 600;
+    margin-left: 0;
+    &:hover {
+        background-color: $secondary;
+        color: $primary;
+    }
+}
+
 .board-piece {
     display: flex;
     justify-content: center;
@@ -281,6 +293,11 @@ html, body, #root {
     padding: 1em;
 }
 
+.carousel {
+    max-width: 750px;
+    margin: auto;
+    box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3)
+}
 
 // COMMON STYLING
 .wrapped-text {
@@ -348,18 +365,6 @@ html, body, #root {
 
 }
 
-.card-footer a.card-link {
-    width: 100%;
-    height: 100%;
-    padding: 0.75rem 0;
-    color: $dark;
-    font-weight: 600;
-    margin-left: 0;
-    &:hover {
-        background-color: $secondary;
-        color: $primary;
-    }
-}
 
 @media only screen and (min-width: 992px) {
     .profile-image {

@@ -26,7 +26,7 @@ const ProjectBoard = ({project, featured = false}) => {
            
             <div className='container board-container'>
                 <div className='row'>
-                    <div className='col-12 p-2 mb-3 p-3'>
+                    <div className='col-12 p-2 mb-3 px-4'>
                     <Carousel>
                         {slides}
                     </Carousel>

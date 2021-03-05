@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Alert } from 'react-bootstrap';
 
-const ContactForm = (props) => {
+const ContactForm = () => {
     const [ fullName, setName ] = useState('');
     const [ email, setEmail ] = useState('');
     const [ message, setMessage ] = useState('');

@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { ProjectBoard } from './common';
-import ProjectCard from './ProjectCard';
+import { ProjectBoard, ProjectCard } from './common';
 
 const Projects = (props) => {
 
