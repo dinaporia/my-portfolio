@@ -19,13 +19,13 @@ const Contact = () => {
                         <div className=' align-self-center mb-2 mb-lg-auto'>
                         <div className="row">
                             <div className="col-12 col-sm-4 col-lg-12 col-xl-4 p-2">
-                                <a className="btn btn-outline-secondary social-button " href="http://instagram.com/aporiart"><i className="fa fa-5x fa-instagram " /> </a>
+                                <a className="btn btn-outline-secondary social-button " href="http://instagram.com/aporiart"><i className="fab fa-5x fa-instagram " /> </a>
                             </div>
                             <div className="col-12 col-sm-4 col-lg-12 col-xl-4 p-2">
-                                <a className="btn btn-outline-secondary social-button" href="https://www.linkedin.com/in/dinamuhic"><i className="fa fa-5x fa-linkedin" /></a>
+                                <a className="btn btn-outline-secondary social-button" href="https://www.linkedin.com/in/dinamuhic"><i className="fab fa-5x fa-linkedin" /></a>
                             </div>
                             <div className="col-12 col-sm-4 col-lg-12 col-xl-4 p-2">
-                                <a className="btn btn-outline-secondary social-button" href="https://github.com/dinaporia"><i className="fa fa-5x fa-github " /></a>
+                                <a className="btn btn-outline-secondary social-button" href="https://github.com/dinaporia"><i className="fab fa-5x fa-github " /></a>
                             </div>
                         </div>
                     </div>
