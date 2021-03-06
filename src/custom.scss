@@ -295,8 +295,10 @@ html, body, #root {
 
 .carousel {
     max-width: 750px;
+    max-width: 95%;
     margin: auto;
-    box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3)
+    box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+    background-image: url('assets/images/carousel.png');   
 }
 
 // COMMON STYLING

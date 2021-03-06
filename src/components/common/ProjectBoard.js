@@ -7,11 +7,11 @@ import PostIt from './PostIt';
 const ProjectBoard = ({project, featured = false}) => {
     const {green, yellow, blue, images} = project;
 
-    const slides = images.map(image => {
+    const slides = images.map((image, index) => {
         return (
-            <Carousel.Item>
+            <Carousel.Item key={index}>
                 <img 
-                    className='d-block w-100'
+                    className='d-block mw-100 m-auto'
                     src={image.src}
                     alt={image.alt}
                 />

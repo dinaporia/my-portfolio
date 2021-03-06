@@ -19,9 +19,11 @@ const Projects = (props) => {
             text: ['Appointment scheduling', 'Recurring Tasks', 'User-defined categories']
         },
         images: [
-            { src: 'images/smartask-slides/addtask.png', alt: 'Add a new task'},
-            { src: 'images/smartask-slides/detailtask.png', alt: 'Add task details'},
+            { src: 'images/smartask-slides/add.png', alt: 'Add a new task'},
+            { src: 'images/smartask-slides/details.png', alt: 'Add or edit task details'},
             { src: 'images/smartask-slides/list.png', alt: 'View task list'},
+            { src: 'images/smartask-slides/schedule.png', alt: 'View daily schedule'},
+            { src: 'images/smartask-slides/settings.png', alt: 'Edit user settings'},
         ]
     };
 
@@ -39,7 +41,7 @@ const Projects = (props) => {
                 <ProjectCard 
                     header='Cinema Art'
                     subTitle='Fully Responsive Educational Website'
-                    image={{url: 'images/placeholder.png', alt: 'cinema'}}
+                    image={{url: 'images/cinema-art.jpg', alt: 'mockup of website on 3 different screen sizes'}}
                     html sass bootstrap js
                     code='#'
                     demo='#'
@@ -50,7 +52,7 @@ const Projects = (props) => {
                 <ProjectCard 
                     header="You Don't Know Film!"
                     subTitle='Jeopardy-style Trivia Game'
-                    image={{url: 'images/placeholder.png', alt: 'cinema'}}
+                    image={{url: 'images/film-trivia.jpg', alt: 'mockup of game on laptop and tablet'}}
                     html css js
                     code='#'
                     demo='#'
@@ -61,7 +63,7 @@ const Projects = (props) => {
                 <ProjectCard 
                         header="This Very Site"
                         subTitle="Responsive Single Page App"
-                        image={{url: 'images/placeholder.png', alt: 'cinema'}}
+                        image={{url: 'images/portfolio.jpg', alt: 'homepage of this site with a you-are-here pointer'}}
                         react sass bootstrap js
                         code='#'
                         demo='#'
