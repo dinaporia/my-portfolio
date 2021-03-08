@@ -22,7 +22,19 @@ const Home = (props) => {
             <div className="col-lg-4 p-0">
             <div className="home-wrapper bg-light">
                 <h2 className="wrapped-title">Contact Me</h2>
-                    <Button variant="outline-primary" size="lg" className="mx-auto" onClick={() => props.history.push('/Contact')}>Email Me</Button>
+                <div className=' align-self-center mb-2 mb-lg-auto'>
+                            <div className="row">
+                                <div className="col-12 col-sm-4 col-lg-12 p-2">
+                                    <a className="btn btn-outline-secondary social-button " href="http://instagram.com/aporiart"><i className="fab fa-5x fa-instagram " /> </a>
+                                </div>
+                                <div className="col-12 col-sm-4 col-lg-12 p-2">
+                                    <a className="btn btn-outline-secondary social-button" href="https://www.linkedin.com/in/dinamuhic"><i className="fab fa-5x fa-linkedin" /></a>
+                                </div>
+                                <div className="col-12 col-sm-4 col-lg-12 p-2">
+                                    <a className="btn btn-outline-secondary social-button" href="https://github.com/dinaporia"><i className="fab fa-5x fa-github " /></a>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>        

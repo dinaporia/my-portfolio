@@ -41,7 +41,7 @@ const ProjectCard = (props) => {
             <Card.Footer className='d-flex justify-content-around p-0'>
                 <Card.Link href={code}>CODE</Card.Link>
                 <Card.Link href={demo}>DEMO</Card.Link>
-                <Card.Link href={details}>DETAILS</Card.Link>
+                {/* <Card.Link href={details}>DETAILS</Card.Link> */}
             </Card.Footer>
         </Card>
 
