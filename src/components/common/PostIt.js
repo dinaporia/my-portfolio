@@ -2,23 +2,19 @@ import React from 'react';
 
 const PostIt = ({color, title, text}) => {
     let bgColor = 'bg-yellowPost';
-    let txtColor = 'text-primary';
+    let txtColor = 'text-medium';
     switch (color) {
         case 'green':
             bgColor = 'bg-greenPost';
-            txtColor = 'text-red';
         break;
         case 'blue':
             bgColor = 'bg-bluePost';
-            txtColor = 'text-yellow';
         break;
         case 'purple':
             bgColor = 'bg-purplePost';
-            txtColor = 'text-white';
         break;
         default:
             bgColor = 'bg-yellowPost';
-            txtColor = 'text-primary';
     }
 
     return (
@@ -27,9 +23,9 @@ const PostIt = ({color, title, text}) => {
                 <h6 className={`postit-header ${bgColor}`}>
                     {title}
                 </h6>
-                <ul className='postit-bullets'>
+                <ul className='postit-bullets fa-ul'>
                     {text.map((item, index) => {
-                        return <li key={index}><i className='fa fa-sm fa-check mr-2'/>{item}</li>
+                        return <li key={index}><span class='fa-li'> <i className='far fa-sm fa-check-square'/></span>{item}</li>
                     })}
                 </ul>
                 

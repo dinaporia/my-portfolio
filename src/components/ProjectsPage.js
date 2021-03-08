@@ -1,22 +1,29 @@
 import React from 'react';
 
-import { ProjectBoard, ProjectCard } from './common';
+import { ProjectCard } from './common';
+import ProjectBoard from './ProjectBoard';
 
 const Projects = (props) => {
 
 
     const smarTask = {
-        green: {
-            title: "Features",
-            text: ['Add detailed tasks', 'Personalize preferences', 'Sort and filter tasks', 'Automatically generated daily schedule']
-        },
-        yellow: {
-            title: 'Technologies',
-            text: ['React Native', 'Redux Toolkit', 'React Animatable', 'Expo SDK']
-        },
-        blue: {
-            title: 'Plans',
-            text: ['Appointment scheduling', 'Recurring Tasks', 'User-defined categories']
+        title: 'SmarTask Mobile',
+        subtitle: 'SmarTask takes care of organizing and scheduling your to-dos so you can focus on completing them!',
+        blurb: 'SmarTask Mobile provides all the standard features of a to-do list app, along with an algorithm to automatically generate a daily schedule based on user preferences. Built with React Native, this app helped me master the use of Redux and Redux Toolkit for state management.',
+        tech: ['React Native', 'Redux'],
+        cards: {
+            right: {
+                title: "Features",
+                text: ['Add detailed tasks', 'Personalize preferences', 'Sort and filter tasks', 'Automatically generate daily schedule']
+            },
+            middle: {
+                title: 'Technologies',
+                text: ['React Native', 'Redux Toolkit', 'React Animatable', 'Expo SDK']
+            },
+            left: {
+                title: 'Plans',
+                text: ['Appointment scheduling', 'Recurring Tasks', 'User-defined categories']
+            }
         },
         images: [
             { src: 'images/smartask-slides/add.png', alt: 'Add a new task'},
@@ -40,7 +47,7 @@ const Projects = (props) => {
             <div className='col-12 col-md-4 p-5 p-md-3'>
                 <ProjectCard 
                     header='Cinema Art'
-                    subTitle='Fully Responsive Educational Website'
+                    subTitle='Responsive Educational Website'
                     image={{url: 'images/cinema-art.jpg', alt: 'mockup of website on 3 different screen sizes'}}
                     html sass bootstrap js
                     code='#'
