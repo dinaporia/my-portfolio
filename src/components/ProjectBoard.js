@@ -6,7 +6,7 @@ import { PostIt } from './common/';
 
 
 const ProjectBoard = ({project, featured = false}) => {
-    const {title, subtitle, blurb, cards, images} = project;
+    const {title, subtitle, blurb, cards, images, links} = project;
     const {left, middle, right } = cards;
 
     const slides = images.map((image, index) => {
@@ -58,8 +58,8 @@ const ProjectBoard = ({project, featured = false}) => {
             </div>
             
             <Card.Footer className='d-flex justify-content-around text-center p-0'>
-                        <Card.Link href='#'>CODE</Card.Link>
-                        <Card.Link href='#'>DEMO</Card.Link>
+                        <Card.Link href={links.code} target="_blank">CODE</Card.Link>
+                        <Card.Link href={links.demo} target="_blank">DEMO</Card.Link>
                     </Card.Footer>
             
             

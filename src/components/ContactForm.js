@@ -13,7 +13,6 @@ const ContactForm = () => {
         setMessage('');
     };
 
-
     const handleSubmit = (e) => {
         setShow(true);
         e.preventDefault();
@@ -54,7 +53,7 @@ const ContactForm = () => {
                 </Form.Group>
             </Form.Row>
             <Form.Row className='pt-2'>
-                <button type='submit' className='btn btn-lg btn-outline-secondary mx-auto'>Send Email</button>
+                <button type='submit' className='btn btn-lg btn-outline-accent mx-auto'>Send Email</button>
                 {show && 
                 <Alert 
                     variant='danger' 
@@ -65,7 +64,7 @@ const ContactForm = () => {
                     dismissible
                 >
                     <Alert.Heading>This feature has not been implemented yet.</Alert.Heading>
-                    <p>Thank you for the message, {fullName}, but I am still working on setting up a server to enable sending messages from here. In the meantime, please contact me via LinkedIn or GitHub. Thank you for your patience while I get everything up and running!</p>
+                    <p>Thank you for the message, {fullName}, but I am still working on setting up a server to enable sending messages from here. This form is mostly for show! In the meantime, please contact me via LinkedIn or <a href="mailto:dmuhic@gmail.com" target="_blank">email me here.</a> Thank you for your patience while I get everything up and running!</p>
                 </Alert>}
             </Form.Row>  
         </Form>

@@ -1,10 +1,11 @@
 // theme colors
-$primary: #1178a9;
-$accent: #f8ef72;
-$secondary: #ffa693;
+$primary: #6F23D1;
+$accent: #A2D6F9;
+$secondary: #FCF300;
 $dark:#1a1a1a;
-$medium: #242424;
+$medium: #313235;
 $light: #616161;
+
 $yellow: #f8e804;
 $purple: rgb(167, 2, 238);
 $red: rgb(248, 2, 2);
@@ -13,9 +14,6 @@ $yellowPost: rgba(250, 250, 86, 0.9);
 $greenPost: rgba(168, 252, 89, 0.9);
 $bluePost: rgba(110, 201, 253, 0.9);
 $purplePost: rgba(168, 51, 214, 0.9);
-
-$trans-box: rgba(0, 0, 0, 0.3);
-
 
 $theme-colors: (
     "secondary": $secondary,
@@ -61,7 +59,6 @@ html, body, #root {
     width: 100%;
     justify-content: flex-start;
     display: flex;
-    z-index: 100;
 }
 
 // remove bootstrap's dropdown arrow
@@ -75,14 +72,12 @@ html, body, #root {
     text-align: center;
     margin: auto;
     display: block;
-    background-color: $dark;
     color: $secondary;
     font-weight: bolder;
     font-size: 1.7em;
     border-radius: 50%;
-    border: $secondary 1px solid;
+    border: $accent 1px solid;
     padding: 15px;
-    z-index: 110;
     cursor: pointer;
     // mute color when not in focus
     &:not(:hover) {
@@ -95,7 +90,7 @@ html, body, #root {
     top: 0;
     left: 0;
     width: 100%;
-    background: $secondary;
+    background: $accent;
     display: flex;
     padding: 3px 0;
     text-align: center;
@@ -130,7 +125,7 @@ html, body, #root {
             transition: transform 2s;
             &:hover {
                 background-color: transparent;
-                color: $accent;
+                color: $secondary;
             }
         }
         &.open {
@@ -145,9 +140,6 @@ html, body, #root {
     
 }
 @media only screen and (min-width: 992px) { 
-    #nav-header-toggle {
-        background-color: $medium;
-    }
     .nav-dropdown {
         justify-content: center;
         align-items: center;
@@ -274,12 +266,13 @@ html, body, #root {
     width: 100%;
     height: 100%;
     padding: 0.75rem 0;
-    color: $primary;
+    color: $dark;
     font-weight: 600;
     margin-left: 0;
     &:hover {
-        background-color: $secondary;
+        background-color: $accent;
         color: $dark;
+        cursor: pointer;
     }
 }
 
@@ -304,7 +297,8 @@ html, body, #root {
     background-color: white;
     padding: 1em 0 0;
     position: relative;
-    color: 	#0000CD;
+    //color: 	#0000CD;
+    color: $primary;
     margin-bottom: 2em;
     max-width: 1000px;
     margin: auto;
@@ -330,12 +324,12 @@ html, body, #root {
     font-family: 'Fredericka the Great';
     font-size: 1.7em;
     color: 	$red;
-
     padding: 1em;
     position: absolute;
     top: -5px;
     left: -55px;
     transform: rotate(-30deg);
+    text-shadow: 1px 1px 2px $dark;
 }
 
 .carousel {
@@ -343,15 +337,18 @@ html, body, #root {
     max-width: 95%;
     margin: auto;
     box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
-    background-image: url('assets/images/carousel.png');   
+    background-image: url('assets/images/carousel.png'); 
+    background-color: $light;
+    background-blend-mode: multiply;  
 }
 
 // COMMON STYLING
 .wrapped-text {
-    font-size: 1.2em;
+    font-size: 1rem;
     text-align: center;
     color: white;
-    margin: auto 2em;
+    margin: auto auto 2em;
+
 }
 
 .wrapped-title {
@@ -359,6 +356,13 @@ html, body, #root {
     text-align: center;
     color: #f0f8ff;
     margin: 1em;
+}
+
+@media only screen and (min-width: 576px) {
+    .wrapped-text {
+        font-size: 1.2rem;
+
+    }
 }
 
 .about-title-one {
@@ -380,7 +384,6 @@ html, body, #root {
 
 .home-wrapper {
     padding: 3em;
-    padding-top: 4em;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -409,7 +412,6 @@ html, body, #root {
     i.fa-5x {
         font-size: 8em;
     }
-
 }
 
 

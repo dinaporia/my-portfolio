@@ -9,8 +9,11 @@ const Projects = (props) => {
     const smarTask = {
         title: 'SmarTask Mobile',
         subtitle: 'SmarTask takes care of organizing and scheduling your to-dos so you can focus on completing them!',
-        blurb: 'SmarTask Mobile provides all the standard features of a to-do list app, along with an algorithm to automatically generate a daily schedule based on user preferences. Built with React Native, this app helped me master the use of Redux and Redux Toolkit for state management.',
-        tech: ['React Native', 'Redux'],
+        blurb: 'SmarTask Mobile provides all the standard features of a to-do list app, along with an algorithm to automatically generate a daily schedule based on user preferences. Built with React Native, this app takes advantage of Redux for state management.',
+        links: {
+            code: 'https://github.com/dinaporia/smartask-mobile',
+            demo: '#'
+        },
         cards: {
             right: {
                 title: "Features",
@@ -34,10 +37,8 @@ const Projects = (props) => {
         ]
     };
 
-
-
     return (
-        <div className='bg-dark row py-7 px-2'>
+        <div className='bg-medium row py-7 px-2'>
             <div className='col-12 p-5'>
                 <ProjectBoard 
                     project={smarTask}
@@ -50,9 +51,8 @@ const Projects = (props) => {
                     subTitle='Responsive Educational Website'
                     image={{url: 'images/cinema-art.jpg', alt: 'mockup of website on 3 different screen sizes'}}
                     html sass bootstrap js
-                    code='#'
-                    demo='#'
-                    details='#'
+                    code='https://github.com/dinaporia/cinema-art'
+                    demo='https://dinamuhic.com/cinema-art/index.html'
                 />
             </div>
             <div className='col-12 col-md-4 p-5 p-md-3'>
@@ -61,20 +61,18 @@ const Projects = (props) => {
                     subTitle='Jeopardy-style Trivia Game'
                     image={{url: 'images/film-trivia.jpg', alt: 'mockup of game on laptop and tablet'}}
                     html css js
-                    code='#'
-                    demo='#'
-                    details='#'
+                    code='https://github.com/dinaporia/cinema-art/blob/main/js/games.js'
+                    demo='https://dinamuhic.com/cinema-art/learning/games.html'
                 />
             </div>
             <div className='col-12 col-md-4 p-5 p-md-3'>
                 <ProjectCard 
-                        header="This Very Site"
+                        header="My Portfolio Site"
                         subTitle="Responsive Single Page App"
                         image={{url: 'images/portfolio.jpg', alt: 'homepage of this site with a you-are-here pointer'}}
                         react sass bootstrap js
-                        code='#'
-                        demo='#'
-                        details='#'
+                        code='https://github.com/dinaporia/my-portfolio'
+                        
                     />
             </div>
                 

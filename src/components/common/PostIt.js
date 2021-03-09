@@ -25,7 +25,7 @@ const PostIt = ({color, title, text}) => {
                 </h6>
                 <ul className='postit-bullets fa-ul'>
                     {text.map((item, index) => {
-                        return <li key={index}><span class='fa-li'> <i className='far fa-sm fa-check-square'/></span>{item}</li>
+                        return <li key={index}><span className='fa-li'> <i className='far fa-sm fa-check-square'/></span>{item}</li>
                     })}
                 </ul>
                 
