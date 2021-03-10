@@ -1,6 +1,7 @@
 import NavHeader from './NavHeader';
 import PostIt from './PostIt';
 import ProjectCard from './ProjectCard';
+import Contact from './Contact';
 
 
-export { NavHeader, PostIt, ProjectCard };
+export { Contact, NavHeader, PostIt, ProjectCard };

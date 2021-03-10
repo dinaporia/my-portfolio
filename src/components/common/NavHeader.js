@@ -3,7 +3,9 @@ import { Dropdown,  Container } from "react-bootstrap";
 import { withRouter, NavLink } from 'react-router-dom';
 
 
+
 const NavHeader = (props) => {
+
     const [showMenu, setShowMenu] = useState(false);
 
     return (
@@ -17,7 +19,7 @@ const NavHeader = (props) => {
                     id="nav-header-toggle" 
                     className="d-none d-sm-block"
                     onMouseEnter={() => setShowMenu(true)}
-                    onClick={() => props.history.push('/home')}
+                    onClick={() => setShowMenu(!showMenu)}
                 >
                     DM
                 </Dropdown.Toggle>

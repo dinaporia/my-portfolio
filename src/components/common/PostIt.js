@@ -12,6 +12,7 @@ const PostIt = ({color, title, text}) => {
         break;
         case 'purple':
             bgColor = 'bg-purplePost';
+            txtColor = 'text-white';
         break;
         default:
             bgColor = 'bg-yellowPost';

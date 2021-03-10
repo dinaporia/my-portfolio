@@ -39,13 +39,13 @@ const Projects = (props) => {
 
     return (
         <div className='bg-medium row py-7 px-2'>
-            <div className='col-12 p-5'>
+            <div className='col-12 px-2 py-4 p-sm-5'>
                 <ProjectBoard 
                     project={smarTask}
                     featured
                 />
             </div>
-            <div className='col-12 col-md-4 p-5 p-md-3'>
+            <div className='col-12 col-md-4 px-2 py-4 p-sm-5 p-md-3'>
                 <ProjectCard 
                     header='Cinema Art'
                     subTitle='Responsive Educational Website'
@@ -55,7 +55,7 @@ const Projects = (props) => {
                     demo='https://dinamuhic.com/cinema-art/index.html'
                 />
             </div>
-            <div className='col-12 col-md-4 p-5 p-md-3'>
+            <div className='col-12 col-md-4 px-2 py-4 p-sm-5 p-md-3'>
                 <ProjectCard 
                     header="You Don't Know Film!"
                     subTitle='Jeopardy-style Trivia Game'
@@ -65,14 +65,17 @@ const Projects = (props) => {
                     demo='https://dinamuhic.com/cinema-art/learning/games.html'
                 />
             </div>
-            <div className='col-12 col-md-4 p-5 p-md-3'>
+            <div className='col-12 col-md-4 px-2 py-4 p-sm-5 p-md-3'>
                 <ProjectCard 
                         header="My Portfolio Site"
                         subTitle="Responsive Single Page App"
                         image={{url: 'images/portfolio.jpg', alt: 'homepage of this site with a you-are-here pointer'}}
                         react sass bootstrap js
                         code='https://github.com/dinaporia/my-portfolio'
-                        
+                        modal={{
+                            title: 'You\'re looking at it!', 
+                            body: 'This website was created using React and Sass, with a dash of Bootstrap. It features 2 types of reusable project-demo components, a customizable, Sass-styled PostIt component, and a css-animated navigation bar component. The entire site is fully responsive - feel free to resize your browser to check it out!'
+                            }}
                     />
             </div>
                 

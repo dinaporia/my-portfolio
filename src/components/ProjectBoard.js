@@ -42,7 +42,7 @@ const ProjectBoard = ({project, featured = false}) => {
                 <div className='row postits-row'>
                     <div className='board-piece col-12 col-md-4 align-self-md-center'>
                         <div className='left-postit'>
-                            <PostIt color='green' title={left.title} text={left.text} />
+                            <PostIt color='purple' title={left.title} text={left.text} />
                         </div>
                     </div>
                     <div className='board-piece col-12 col-md-3 col-lg-4 align-self-md-end justify-content-center'>

@@ -3,7 +3,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 
 import About from './AboutPage';
 import Home from './HomePage';
-import Contact from './ContactPage';
+import ContactPage from './ContactPage';
 import Projects from './ProjectsPage';
 import NavHeader from './common/NavHeader';
 
@@ -23,7 +23,7 @@ const Navigation = () => {
                     <Projects />                
                 </Route>
                 <Route path='/contact'>
-                    <Contact />                
+                    <ContactPage />                
                 </Route>
                 <Redirect to='/home' />
             </Switch>

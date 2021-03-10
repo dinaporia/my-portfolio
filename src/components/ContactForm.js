@@ -16,7 +16,7 @@ const ContactForm = () => {
     const handleSubmit = (e) => {
         setShow(true);
         e.preventDefault();
-    }
+    };
 
     return (
         <Form onSubmit={handleSubmit} className='mx-n4 m-sm-2'>
@@ -64,7 +64,7 @@ const ContactForm = () => {
                     dismissible
                 >
                     <Alert.Heading>This feature has not been implemented yet.</Alert.Heading>
-                    <p>Thank you for the message, {fullName}, but I am still working on setting up a server to enable sending messages from here. This form is mostly for show! In the meantime, please contact me via LinkedIn or <a href="mailto:dmuhic@gmail.com" target="_blank">email me here.</a> Thank you for your patience while I get everything up and running!</p>
+                    <p>Thank you for the message, {fullName}, but I am still working on setting up a server to enable sending messages from here. This form is mostly for show! In the meantime, please contact me via LinkedIn or <a href="mailto:dmuhic@gmail.com" target="_blank" rel="noreferrer">email me here.</a> Thank you for your patience while I get everything up and running!</p>
                 </Alert>}
             </Form.Row>  
         </Form>
