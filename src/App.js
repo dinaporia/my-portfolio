@@ -3,10 +3,9 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import Navigation from './components/Navigation';
 
-
 function App() {
   return (
-   <Router>
+    <Router>
       <Navigation />
     </Router>
   );

@@ -3,6 +3,7 @@ import React from 'react';
 const PostIt = ({color, title, text}) => {
     let bgColor = 'bg-yellowPost';
     let txtColor = 'text-medium';
+
     switch (color) {
         case 'green':
             bgColor = 'bg-greenPost';
@@ -29,7 +30,6 @@ const PostIt = ({color, title, text}) => {
                         return <li key={index}><span className='fa-li'> <i className='far fa-sm fa-check-square'/></span>{item}</li>
                     })}
                 </ul>
-                
                 <div className={`postit-inset ${bgColor}`} />
             </div>
         </div>

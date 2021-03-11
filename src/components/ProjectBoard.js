@@ -3,12 +3,10 @@ import { Carousel, Card } from 'react-bootstrap';
 
 import { PostIt } from './common/';
 
-
-
 const ProjectBoard = ({project, featured = false}) => {
     const {title, subtitle, blurb, cards, images, links} = project;
     const {left, middle, right } = cards;
-
+    // retrieve carousel slides from images props
     const slides = images.map((image, index) => {
         return (
             <Carousel.Item key={index}>
@@ -19,20 +17,21 @@ const ProjectBoard = ({project, featured = false}) => {
                 />
             </Carousel.Item>
         )
-    })
+    });
 
     return (
         <div className='board'>
+
             {featured && <h6 className='featured'>Featured Project</h6> }
             <h3 className='text-center'>{title}</h3>
             <h5 className='text-center text-medium px-3 mb-4'>{subtitle}</h5>
-           
+           {/* board-container contents overlap on larger screens, stack on small */}
             <div className='container board-container'>
                 <div className='row'>
                     <div className='col-12 col-md-7 p-2 col-lg-8 mb-3 px-4'>
-                    <Carousel>
-                        {slides}
-                    </Carousel>
+                        <Carousel>
+                            {slides}
+                        </Carousel>
                     </div>
                     <div className='text-left text-md-right col-12 col-md-5 col-lg-4 align-self-end p-3'>
                         <p className='mb-1'>{blurb}</p>
@@ -58,11 +57,9 @@ const ProjectBoard = ({project, featured = false}) => {
             </div>
             
             <Card.Footer className='d-flex justify-content-around text-center p-0'>
-                        <Card.Link href={links.code} target="_blank">CODE</Card.Link>
-                        <Card.Link href={links.demo} target="_blank">DEMO</Card.Link>
-                    </Card.Footer>
-            
-            
+                <Card.Link href={links.code} target="_blank">CODE</Card.Link>
+                <Card.Link href={links.demo} target="_blank">DEMO</Card.Link>
+            </Card.Footer>
         </div>
     );
 }

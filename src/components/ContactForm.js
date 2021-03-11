@@ -54,7 +54,7 @@ const ContactForm = () => {
             </Form.Row>
             <Form.Row className='pt-2'>
                 <button type='submit' className='btn btn-lg btn-outline-accent mx-auto'>Send Email</button>
-                {show && 
+                { show && 
                 <Alert 
                     variant='danger' 
                     onClose={() => {
@@ -65,6 +65,7 @@ const ContactForm = () => {
                 >
                     <Alert.Heading>This feature has not been implemented yet.</Alert.Heading>
                     <p>Thank you for the message, {fullName}, but I am still working on setting up a server to enable sending messages from here. This form is mostly for show! In the meantime, please contact me via LinkedIn or <a href="mailto:dmuhic@gmail.com" target="_blank" rel="noreferrer">email me here.</a> Thank you for your patience while I get everything up and running!</p>
+
                 </Alert>}
             </Form.Row>  
         </Form>

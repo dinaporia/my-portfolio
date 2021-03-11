@@ -2,15 +2,12 @@
 $primary: #6F23D1;
 $accent: #A2D6F9;
 $secondary: #faf799;
-//#FCF300;
 $dark:#1a1a1a;
 $medium: #313235;
 $light: #616161;
-
-// $yellow: #f8e804;
-// $purple: rgb(167, 2, 238);
 $red: rgb(255, 16, 16);
 
+// post-it note colors
 $yellowPost: rgba(250, 250, 86, 0.9);
 $greenPost: rgba(168, 252, 89, 0.9);
 $bluePost: rgba(110, 201, 253, 0.9);
@@ -26,9 +23,6 @@ $theme-colors: (
     'greenPost': $greenPost,
     'bluePost': $bluePost,
     'purplePost': $purplePost,
-    // 'yellow': $yellow,
-    // 'purple': $purple,
-    // 'red': $red
 );
 
 $spacers: (
@@ -55,7 +49,6 @@ html, body, #root {
     display: flex;
 }
 
-// center toggle button
 .nav-dropdown {
     width: 100%;
     justify-content: flex-start;
@@ -79,7 +72,9 @@ html, body, #root {
     border-radius: 50%;
     border: $accent 1px solid;
     padding: 15px;
+    // disable text selection
     cursor: context-menu;
+    user-select: none;
     // mute color when not in focus
     &:not(:hover) {
         opacity: 0.5;
@@ -114,6 +109,7 @@ html, body, #root {
         }
     }
 }
+// collapse menu on sm+ screens
 @media only screen and (min-width: 576px) {
     .drop-menu {
         top: 5px;
@@ -138,8 +134,8 @@ html, body, #root {
             }
         }
     }
-    
 }
+// center toggle on large+ screens
 @media only screen and (min-width: 992px) { 
     .nav-dropdown {
         justify-content: center;
@@ -158,6 +154,10 @@ html, body, #root {
 }
 
 // POSTIT STYLING
+.postit-wrap {
+    filter: drop-shadow(4px 5px 5px rgba(15, 2, 92, 0.507));
+    display: inline-block;
+}
 .postit-main {
     position: relative;
     display: flex;
@@ -190,11 +190,6 @@ html, body, #root {
     font-size: 1.3em;
 }
 
-.postit-wrap {
-    filter: drop-shadow(4px 5px 5px rgba(15, 2, 92, 0.507));
-    display: inline-block;
-}
-
 .postit-bullets {
     padding-left: .7em;
     padding-right: .5em;
@@ -204,8 +199,19 @@ html, body, #root {
     font-size: 1em;
     font-weight: bold;
 }
-
+// absolute positioning on md+ screens
 @media only screen and (min-width: 768px) {
+    .board-container {
+        position: relative;
+    }
+
+    .postits-row {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+
     .postit-main {
         width: 200px;
         height: 200px;
@@ -220,20 +226,9 @@ html, body, #root {
         transform: translate(-40%, 5%) rotate(15deg);
         display: inline-block;
     }
-    
-    .board-container {
-        position: relative;
-    }
-
-    .postits-row {
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 100%;
-    }
 }
 
-// PROJECT BOARD STYLING
+// PROJECT CARD STYLING
 .project-card {
     position: relative;
     padding: 0;
@@ -242,9 +237,7 @@ html, body, #root {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    // &:hover {
-    //     opacity: 0.5;
-    // }
+    user-select: none;
     &.active {
         opacity: 0.5;
     }
@@ -285,6 +278,7 @@ html, body, #root {
     margin-bottom: 0;
 }
 
+// PROJECT BOARD STYLING 
 .board-piece {
     display: flex;
     justify-content: center;
@@ -301,16 +295,16 @@ html, body, #root {
     background-color: white;
     padding: 1em 0 0;
     position: relative;
-    //color: 	#0000CD;
     color: $primary;
     margin-bottom: 2em;
     max-width: 1000px;
     margin: auto;
-    font-family: 'Shadows Into Light';
+    h3, h5, .board-container {
+        font-family: 'Shadows Into Light';
+    }
     h3 {
         font-size: 3em;
         font-weight: bold;
-
     }
     p {
         font-variant-caps: small-caps;
@@ -318,10 +312,6 @@ html, body, #root {
         font-weight: bold;
         line-height: 1.2;
     }
-    .card-footer a.card-link {
-        font-family: 'Segoe UI';
-    }
-
 }
 
 .featured {
@@ -366,12 +356,10 @@ html, body, #root {
 }
 
 .about-title-one {
-    // font-size: 2em;
     color: $dark;
     align-self: flex-end;
 }
 .about-title-two {
-    // font-size: 2em;
     color: $light;
     align-self: flex-start;
 }
@@ -407,9 +395,8 @@ html, body, #root {
 .profile-image {
     display: block;
     margin: auto;
-    width: 50%;
+    width: 75%;
     padding: 2rem 0;
-    // border-radius: 30%;
 }
 
 .social-button {
@@ -420,7 +407,6 @@ html, body, #root {
         font-size: 8em;
     }
 }
-
 
 @media only screen and (min-width: 576px) {
     .wrapped-text {
@@ -434,10 +420,5 @@ html, body, #root {
     }
     .responsive-title {
         font-size: 2rem;
-    }
-}
-@media only screen and (min-width: 992px) {
-    .profile-image {
-        width: 75%;
     }
 }

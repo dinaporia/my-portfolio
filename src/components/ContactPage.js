@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import ContactForm from './ContactForm';
+
 import { Contact } from './common';
 
 const ContactPage = () => {

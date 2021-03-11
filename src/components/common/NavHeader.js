@@ -2,24 +2,26 @@ import React, {useState} from 'react';
 import { Dropdown,  Container } from "react-bootstrap";
 import { withRouter, NavLink } from 'react-router-dom';
 
-
-
 const NavHeader = (props) => {
-
     const [showMenu, setShowMenu] = useState(false);
+    
+    // if hover not available, clicking toggle opens the menu
+    const hoverHandler = () => {
+        if (window.matchMedia( "(hover: none)" ).matches) { 
+            setShowMenu(!showMenu) 
+        } else {
+            props.history.push('/home')}
+        };
 
     return (
-        <Container id="nav-container"
-        onMouseLeave={() => setShowMenu(false)}>
-            <Dropdown className="nav-dropdown"
-            onMouseEnter={() => setShowMenu(true)}
-            >
+        <Container id="nav-container" onMouseLeave={() => setShowMenu(false)}>
+            <Dropdown className="nav-dropdown" onMouseEnter={() => setShowMenu(true)} >
                 <Dropdown.Toggle 
                     as="div" 
                     id="nav-header-toggle" 
                     className="d-none d-sm-block"
                     onMouseEnter={() => setShowMenu(true)}
-                    onClick={() => setShowMenu(!showMenu)}
+                    onClick={hoverHandler}
                 >
                     DM
                 </Dropdown.Toggle>
@@ -33,7 +35,6 @@ const NavHeader = (props) => {
    
             </Dropdown>
         </Container>
-        
     );
 }
 

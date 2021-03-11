@@ -3,8 +3,7 @@ import React from 'react';
 import { ProjectCard } from './common';
 import ProjectBoard from './ProjectBoard';
 
-const Projects = (props) => {
-
+const Projects = () => {
 
     const smarTask = {
         title: 'SmarTask Mobile',
@@ -57,7 +56,7 @@ const Projects = (props) => {
             </div>
             <div className='col-12 col-md-4 px-2 py-4 p-sm-5 p-md-3'>
                 <ProjectCard 
-                    header="You Don't Know Film!"
+                    header="I Know Film!"
                     subTitle='Jeopardy-style Trivia Game'
                     image={{url: 'images/film-trivia.jpg', alt: 'mockup of game on laptop and tablet'}}
                     html css js
@@ -67,16 +66,16 @@ const Projects = (props) => {
             </div>
             <div className='col-12 col-md-4 px-2 py-4 p-sm-5 p-md-3'>
                 <ProjectCard 
-                        header="My Portfolio Site"
-                        subTitle="Responsive Single Page App"
-                        image={{url: 'images/portfolio.jpg', alt: 'homepage of this site with a you-are-here pointer'}}
-                        react sass bootstrap js
-                        code='https://github.com/dinaporia/my-portfolio'
-                        modal={{
-                            title: 'You\'re looking at it!', 
-                            body: 'This website was created using React and Sass, with a dash of Bootstrap. It features 2 types of reusable project-demo components, a customizable, Sass-styled PostIt component, and a css-animated navigation bar component. The entire site is fully responsive - feel free to resize your browser to check it out!'
-                            }}
-                    />
+                    header="My Portfolio Site"
+                    subTitle="Responsive Single Page App"
+                    image={{url: 'images/portfolio.jpg', alt: 'homepage of this site with a you-are-here pointer'}}
+                    react sass bootstrap js
+                    code='https://github.com/dinaporia/my-portfolio'
+                    modal={{
+                        title: 'You\'re looking at it!', 
+                        body: 'This website was created using React and Sass, with a dash of Bootstrap. It features 2 types of reusable project-demo components, a customizable, Sass-styled PostIt component, and a css-animated navigation bar component. The entire site is fully responsive - feel free to resize your browser to check it out!'
+                        }}
+                />
             </div>
                 
         </div>
