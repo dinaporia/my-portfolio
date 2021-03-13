@@ -2,7 +2,6 @@ import React from 'react';
 
 const PostIt = ({color, title, text}) => {
     let bgColor = 'bg-yellowPost';
-    let txtColor = 'text-medium';
 
     switch (color) {
         case 'green':
@@ -13,7 +12,7 @@ const PostIt = ({color, title, text}) => {
         break;
         case 'purple':
             bgColor = 'bg-purplePost';
-            txtColor = 'text-white';
+            // txtColor = 'text-white';
         break;
         default:
             bgColor = 'bg-yellowPost';
@@ -21,7 +20,7 @@ const PostIt = ({color, title, text}) => {
 
     return (
         <div className='postit-wrap'>
-            <div className={`postit-main ${bgColor} ${txtColor}`} >
+            <div className={`postit-main ${bgColor}`} >
                 <h6 className={`postit-header ${bgColor}`}>
                     {title}
                 </h6>

@@ -19,10 +19,11 @@ const ContactForm = () => {
     };
 
     return (
+        
         <Form onSubmit={handleSubmit} className='mx-n4 m-sm-2'>
             <Form.Row className='px-0'>
                 <Form.Group className='col-12 col-xl-6 pr-xl-2'  controlId='formName'>
-                    <Form.Label className='text-white'>Your Name:</Form.Label>
+                    <Form.Label className='label'>Your Name:</Form.Label>
                     <Form.Control 
                         required
                         type='text' 
@@ -31,7 +32,7 @@ const ContactForm = () => {
                         onChange={ e => setName(e.target.value)} />
                 </Form.Group>
                 <Form.Group className='col-12 col-xl-6 pl-xl-2' controlId='formEmail'>
-                    <Form.Label className='text-white'>Your Email:</Form.Label>
+                    <Form.Label className='label'>Your Email:</Form.Label>
                     <Form.Control 
                         required
                         type='email' 
@@ -42,7 +43,7 @@ const ContactForm = () => {
             </Form.Row>
             <Form.Row className='px-0'>
                 <Form.Group className='col-12' controlId='formMessage'>
-                    <Form.Label className='text-white'>Your Message:</Form.Label>
+                    <Form.Label className='label'>Your Message:</Form.Label>
                     <Form.Control 
                         required
                         as='textarea' 
@@ -52,7 +53,7 @@ const ContactForm = () => {
                         onChange={ e => setMessage(e.target.value)} />
                 </Form.Group>
             </Form.Row>
-            <Form.Row className='pt-2'>
+            <Form.Row className='pt-5'>
                 <button type='submit' className='btn btn-lg btn-outline-accent mx-auto'>Send Email</button>
                 { show && 
                 <Alert 

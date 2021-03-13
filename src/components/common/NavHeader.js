@@ -15,7 +15,7 @@ const NavHeader = (props) => {
 
     return (
         <Container id="nav-container" onMouseLeave={() => setShowMenu(false)}>
-            <Dropdown className="nav-dropdown" onMouseEnter={() => setShowMenu(true)} >
+            <Dropdown className="nav-dropdown"  >
                 <Dropdown.Toggle 
                     as="div" 
                     id="nav-header-toggle" 

@@ -3,7 +3,7 @@ import { Carousel, Card } from 'react-bootstrap';
 
 import { PostIt } from './common/';
 
-const ProjectBoard = ({project, featured = false}) => {
+const ProjectBoard = ({project}) => {
     const {title, subtitle, blurb, cards, images, links} = project;
     const {left, middle, right } = cards;
     // retrieve carousel slides from images props
@@ -21,8 +21,6 @@ const ProjectBoard = ({project, featured = false}) => {
 
     return (
         <div className='board'>
-
-            {featured && <h6 className='featured'>Featured Project</h6> }
             <h3 className='text-center'>{title}</h3>
             <h5 className='text-center text-medium px-3 mb-4'>{subtitle}</h5>
            {/* board-container contents overlap on larger screens, stack on small */}
@@ -34,7 +32,7 @@ const ProjectBoard = ({project, featured = false}) => {
                         </Carousel>
                     </div>
                     <div className='text-left text-md-right col-12 col-md-5 col-lg-4 align-self-end p-3'>
-                        <p className='mb-1'>{blurb}</p>
+                        <p className='mb-1 pl-1'>{blurb}</p>
                     </div>
                 </div>
            

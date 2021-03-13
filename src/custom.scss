@@ -1,11 +1,16 @@
 // theme colors
-$primary: #6F23D1;
-$accent: #A2D6F9;
-$secondary: #faf799;
+$purple: #6f23d1;
+$accent: #6ab6f4;
+// #A2D6F9;
+$secondary: #fcfaab;
+// #faf799;
 $dark:#1a1a1a;
 $medium: #313235;
-$light: #616161;
+$light: #73747c;
+//#616161;
 $red: rgb(255, 16, 16);
+$primary: #3d26a8;
+//#5a008e;
 
 // post-it note colors
 $yellowPost: rgba(250, 250, 86, 0.9);
@@ -61,24 +66,25 @@ html, body, #root {
 }
 
 #nav-header-toggle {
+    opacity: 0.5;
     position: fixed;
     top: 10px;
     text-align: center;
     margin: auto;
     display: block;
-    color: $secondary;
+    color: $accent;
     font-weight: bolder;
     font-size: 1.7em;
     border-radius: 50%;
     border: $accent 1px solid;
     padding: 15px;
-    // disable text selection
-    cursor: context-menu;
+    cursor: pointer;
     user-select: none;
-    // mute color when not in focus
-    &:not(:hover) {
-        opacity: 0.5;
+    &:hover {
+        opacity: 1;
+        box-shadow: -6px 2px 5px $dark;
     }
+
 }
 
 .drop-menu {
@@ -92,8 +98,9 @@ html, body, #root {
     text-align: center;
     justify-content: center;
     overflow: hidden;
-    transition: width 2s;
+    transition: width 1s 1.5s;
     z-index: 100;
+
     a { 
         width: 100%;
         font-variant-caps: all-small-caps;
@@ -117,9 +124,12 @@ html, body, #root {
         position: absolute;
         border-radius: 15px;
         width: 0;
+        box-shadow: 1px -1px 2px $dark;
         a { 
             transform: translate(-200px);
-            transition: transform 2s;
+            transition: transform 1s 1.5s;
+            letter-spacing: 1px;
+           font-weight: bold;
             &:hover {
                 background-color: transparent;
                 color: $secondary;
@@ -127,10 +137,10 @@ html, body, #root {
         }
         &.open {
             width: 75%;
-            transition: width 2s;
+            transition: width 1s;
             a {
                 transform: translate(0, 0);
-                transition: transform 2s;
+                transition: transform 1s;
             }
         }
     }
@@ -144,12 +154,16 @@ html, body, #root {
     .drop-menu {
         &:not(.open) {width: 0;}
         position: relative;
-        top: 35px;
+        //top: 35px;
+        top: 5px;
         left: 0;
         a {
             transform: translate(0, -75px);
             padding: 0.25rem 1.5rem;
         }
+    }
+    #nav-header-toggle:hover {
+        box-shadow: -1px -5px 5px $dark;
     }
 }
 
@@ -165,6 +179,8 @@ html, body, #root {
     height: 250px;
     clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 80% 100%, 0 100%);
     box-shadow: 15px 15px 6px rgba(0, 0, 0, 0.5);
+    color: $black;
+    letter-spacing: 1px;
     font-family: 'Shadows Into Light', cursive;
 }
 
@@ -198,6 +214,7 @@ html, body, #root {
     list-style-type: none;
     font-size: 1em;
     font-weight: bold;
+
 }
 // absolute positioning on md+ screens
 @media only screen and (min-width: 768px) {
@@ -239,7 +256,7 @@ html, body, #root {
     object-fit: contain;
     user-select: none;
     &.active {
-        opacity: 0.5;
+        filter: opacity(50%) brightness(65%);
     }
 }
 .project-card-overlay {
@@ -297,13 +314,13 @@ html, body, #root {
     position: relative;
     color: $primary;
     margin-bottom: 2em;
-    max-width: 1000px;
+    max-width: 900px;
     margin: auto;
     h3, h5, .board-container {
         font-family: 'Shadows Into Light';
     }
     h3 {
-        font-size: 3em;
+        font-size: 2.5em;
         font-weight: bold;
     }
     p {
@@ -312,18 +329,6 @@ html, body, #root {
         font-weight: bold;
         line-height: 1.2;
     }
-}
-
-.featured {
-    font-family: 'Fredericka the Great';
-    font-size: 1.7em;
-    color: 	$red;
-    padding: 1em;
-    position: absolute;
-    top: -5px;
-    left: -55px;
-    transform: rotate(-30deg);
-    text-shadow: 1px 1px 2px $dark;
 }
 
 .carousel {
@@ -342,13 +347,17 @@ html, body, #root {
     text-align: center;
     color: white;
     margin: auto auto 2em;
+    flex-grow: 2;
+    max-width: 700px;
 }
 
 .wrapped-title {
-    // font-size: 2rem;
     text-align: center;
     color: white;
     margin: 1em;
+    flex-grow: 2;
+    font-weight: bold;
+    font-variant-caps: small-caps;
 }
 
 .responsive-title {
@@ -364,6 +373,17 @@ html, body, #root {
     align-self: flex-start;
 }
 
+.about-text {
+    margin: auto;
+    max-width: 700px;
+    color: white;
+}
+.label {
+    display: block;
+    color: white;
+    text-align: left;
+    padding-left: 0.25em;
+}
 .about-wrapper {
     display: flex;
     flex-direction: column-reverse;
@@ -378,35 +398,67 @@ html, body, #root {
 
 .home-wrapper {
     padding: 3em;
+    padding-bottom: 5em;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .contact-wrapper {
-    padding: 3em;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-grow: 3;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.projects-wrapper {
+    max-width: 900px;
+}
+
+.profile-wrapper {
+    padding: 2rem 0;
+    margin: auto;
+    max-width: 75%;
+}
+.img-wrapper-inner {
+    background-color: $dark;
+    padding: 0.5em;
+    transform: rotate(5deg) translate(6px);
+    box-shadow: 3px 3px 4px rgba(27, 27, 27, 0.5);
+
+}
+.img-wrapper-outer {
+    background-color: $medium;
+    padding: 0.5em;
+    transform: rotate(-2deg) translate(-6px);
+    box-shadow: 3px 3px 4px rgba(27, 27, 27, 0.5);
 }
 
 .profile-image {
     display: block;
-    margin: auto;
-    width: 75%;
-    padding: 2rem 0;
+    max-width: 100%;
+    max-height: 100%;
+    border: 4px solid white;
+    transform: rotate(-3deg);
+    box-shadow: 3px 3px 4px rgba(13, 7, 110, 0.5);
 }
 
 .social-button {
-    display: block;
     margin: auto;
-    width: 150px;
-    i.fa-5x {
-        font-size: 8em;
+    color: $accent;
+}
+
+.look-button {
+    font-weight: bold;
+    &:hover {
+        box-shadow: 4px 4px 4px $dark;
+        background-color: $medium;
+        color: $accent;
     }
 }
+
 
 @media only screen and (min-width: 576px) {
     .wrapped-text {
@@ -419,6 +471,6 @@ html, body, #root {
         }
     }
     .responsive-title {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 }

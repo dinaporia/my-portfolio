@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import { ProjectCard } from './common';
 import ProjectBoard from './ProjectBoard';
@@ -24,7 +24,7 @@ const Projects = () => {
             },
             left: {
                 title: 'Plans',
-                text: ['Appointment scheduling', 'Recurring Tasks', 'User-defined categories']
+                text: ['Appointment scheduling', 'Recurring tasks', 'User-defined categories']
             }
         },
         images: [
@@ -37,14 +37,21 @@ const Projects = () => {
     };
 
     return (
-        <div className='bg-medium row py-7 px-2'>
-            <div className='col-12 px-2 py-4 p-sm-5'>
+        <Fragment>
+        <div className='bg-medium row pt-6 px-3'>
+            <div className='col-12 px-2 py-3 pb-sm-5 px-sm-5'>
+            <h4 className='wrapped-title text-light'>Featured Project</h4>
                 <ProjectBoard 
                     project={smarTask}
                     featured
                 />
             </div>
-            <div className='col-12 col-md-4 px-2 py-4 p-sm-5 p-md-3'>
+        </div>
+        <div className='bg-medium row'>
+        <h4 className='wrapped-title text-light mb-0'>Other Work</h4>
+        </div>
+        <div className='bg-medium row pb-7 px-3 px-lg-5 px-xl-7'>
+            <div className='col-12 col-lg-4 py-4 p-sm-5 px-md-6 px-lg-4'>
                 <ProjectCard 
                     header='Cinema Art'
                     subTitle='Responsive Educational Website'
@@ -54,7 +61,7 @@ const Projects = () => {
                     demo='https://dinamuhic.com/cinema-art/index.html'
                 />
             </div>
-            <div className='col-12 col-md-4 px-2 py-4 p-sm-5 p-md-3'>
+            <div className='col-12 col-lg-4 py-4 p-sm-5 px-md-6 px-lg-4'>
                 <ProjectCard 
                     header="I Know Film!"
                     subTitle='Jeopardy-style Trivia Game'
@@ -64,7 +71,7 @@ const Projects = () => {
                     demo='https://dinamuhic.com/cinema-art/learning/games.html'
                 />
             </div>
-            <div className='col-12 col-md-4 px-2 py-4 p-sm-5 p-md-3'>
+            <div className='col-12 col-lg-4 py-4 p-sm-5 px-md-6 px-lg-4'>
                 <ProjectCard 
                     header="My Portfolio Site"
                     subTitle="Responsive Single Page App"
@@ -76,9 +83,9 @@ const Projects = () => {
                         body: 'This website was created using React and Sass, with a dash of Bootstrap. It features 2 types of reusable project-demo components, a customizable, Sass-styled PostIt component, and a css-animated navigation bar component. The entire site is fully responsive - feel free to resize your browser to check it out!'
                         }}
                 />
-            </div>
-                
+            </div>           
         </div>
+        </Fragment>
     );
 }
 
