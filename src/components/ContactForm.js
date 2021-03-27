@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Alert } from 'react-bootstrap';
+import emailjs from 'emailjs-com';
 
 const ContactForm = () => {
     const [ fullName, setName ] = useState('');
@@ -13,9 +14,25 @@ const ContactForm = () => {
         setMessage('');
     };
 
-    const handleSubmit = (e) => {
-        setShow(true);
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        try {
+            const templateParams = {
+            name: fullName,
+            email: email,
+            subject: 'Portfolio Inquiry',
+            message: message
+            };    
+            await emailjs.send(
+                process.env.REACT_APP_SERVICE_ID,
+                process.env.REACT_APP_TEMPLATE_ID,
+                templateParams,
+                process.env.REACT_APP_USER_ID
+            );
+            setShow(true);
+        } catch (e) {
+            console.log(e);
+        }
     };
 
     return (
@@ -64,9 +81,7 @@ const ContactForm = () => {
                         }} 
                     dismissible
                 >
-                    <Alert.Heading>This feature has not been implemented yet.</Alert.Heading>
-                    <p>Thank you for the message, {fullName}, but I am still working on setting up a server to enable sending messages from here. This form is mostly for show! In the meantime, please contact me via LinkedIn or <a href="mailto:dmuhic@gmail.com" target="_blank" rel="noreferrer">email me here.</a> Thank you for your patience while I get everything up and running!</p>
-
+                    <Alert.Heading>Thanks, {fullName}, your message has been sent.</Alert.Heading> 
                 </Alert>}
             </Form.Row>  
         </Form>
