@@ -4,7 +4,7 @@ import { Card, Modal } from 'react-bootstrap';
 const ProjectCard = (props) => {
     const { 
         // required props
-        header, subTitle, image, code, blurb,
+        header, image, code, blurb,
         // optional props
         number = 0,
         demo = false, 
