@@ -90,7 +90,7 @@ const Projects = () => {
             <div className='col-12 col-md-6 py-4 p-sm-5 px-md-4'>
                 <ProjectCard 
                     number={4}
-                    header="My Portfolio Site"
+                    header="Portfolio Site"
                     subTitle="Responsive Single Page App"
                     image={{url: 'images/portfolio.jpg', alt: 'homepage of this site with a you-are-here pointer'}}
                     react sass bootstrap
