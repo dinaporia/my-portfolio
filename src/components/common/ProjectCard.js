@@ -4,8 +4,9 @@ import { Card, Modal } from 'react-bootstrap';
 const ProjectCard = (props) => {
     const { 
         // required props
-        header, subTitle, image, code, 
+        header, subTitle, image, code, blurb,
         // optional props
+        number = 0,
         demo = false, 
         modal = {title: '', body: ''},
         // binary props conditionally render fa icons
@@ -19,12 +20,18 @@ const ProjectCard = (props) => {
     const [ showModal, setShowModal ] = useState(false);
     const demoLink = (demo) ? {href: demo, target: '_blank'} : {onClick: () => setShowModal(true)};
 
+    // determine margin based on odd/even number
+    const placement = (number === 0)
+        ? '' 
+        : (number%2 === 0)
+            ? 'mr-md-auto'
+            : 'ml-md-auto';
+
     return (
         <Fragment>
-            <Card className="text-center h-100">
+            <Card className={`text-center h-100 mx-auto ${placement}`}>
                 <Card.Header>
                     <h5>{header}</h5>
-                    <p className='text-muted fs-5'>{subTitle}</p>
                 </Card.Header>
                 <Card.Body 
                     className='project-card' 
@@ -46,7 +53,12 @@ const ProjectCard = (props) => {
                     <img className={`project-card-image ${(showText) ? 'active' : ''}`} src={image.url} alt={image.alt} draggable={false}/>
 
                 </Card.Body>
-
+                <Card.Body className='card-blurb'>
+                <div>
+                {blurb}
+                </div>
+                    
+                </Card.Body>
                 <Card.Footer className='d-flex justify-content-around p-0'>
                     <Card.Link href={code} target="_blank">CODE</Card.Link>
                     <Card.Link {...demoLink}>DEMO</Card.Link>
@@ -58,7 +70,6 @@ const ProjectCard = (props) => {
                 <Modal.Header closeButton>
                     <Modal.Title>{modal.title}</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>{modal.body}</Modal.Body>
                 <Modal.Footer>
                     <button type='button' className='btn btn-lg btn-outline-primary mx-auto' onClick={()=>setShowModal(false)}>Got it!</button>
                 </Modal.Footer>
