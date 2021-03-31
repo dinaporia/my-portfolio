@@ -10,7 +10,7 @@ const About = () => {
                         <div className='profile-wrapper'>
                         <div className='img-wrapper-outer'>
                             <div className='img-wrapper-inner'>
-                            <img src='images/genre.jpg' className='profile-image' alt='A photograph of Dina' />
+                            <img src='images/me.jpg' className='profile-image' alt='A photograph of Dina' />
                             </div>
                         </div>
                         
