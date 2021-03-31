@@ -1,6 +1,6 @@
-## This app was created using *Create React App*. 
+### This app was created using *Create React App*. 
 
-## Dependencies include:
+### Dependencies include:
 *  "@fortawesome/fontawesome-free": "^5.15.2",
 * "bootstrap": "^4.6.0",
 * "emailjs-com": "^2.6.4",
