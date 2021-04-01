@@ -27,7 +27,9 @@ const Navigation = () => {
                 </Route>
                 <Redirect to='/home' />
             </Switch>
+            <div className='copyright align-self-flex-end'>&#169; Dina Muhic 2021</div>   
         </div>
+        
     );
 }
 

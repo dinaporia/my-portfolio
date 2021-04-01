@@ -43,6 +43,16 @@ html, body, #root {
     height: 100%;
   }
 
+  .copyright {
+      background-color: transparent;
+      position: fixed;
+      bottom: 5%;
+      right: 0;
+      padding: 0 0.5rem;
+      color: #ffffff9e;
+      font-size: 0.7rem;
+      writing-mode: sideways-lr;
+  }
 //   NAVIGATION MENU STYLING
 #nav-container {
     position: fixed;

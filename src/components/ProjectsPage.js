@@ -100,7 +100,9 @@ const Projects = () => {
                         }}
                     blurb='This single page app was created using React and Sass, with a dash of Bootstrap. It features 2 types of reusable project-demo components: a project board and a project card. The hover-activated navigation bar component is animated with pure CSS. The entire site is fully responsive - feel free to resize your browser to check it out!'
                 />
-            </div>           
+                
+            </div>   
+           
         </div>
         </Fragment>
     );
