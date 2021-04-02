@@ -16,7 +16,7 @@ const Home = (props) => {
             <div className="col-lg-6 p-0">
                 <div className="home-wrapper bg-medium pt-lg-6">
                     <h2 className="wrapped-title responsive-title text-dark">WHAT</h2>
-                    <p className="wrapped-text px-md-3">I create responsive websites with HTML, CSS, and JavaScript. Though I'm familiar with various styling libraries and frameworks, I prefer to style my own elements with Sass while taking advantage of Bootstrap's flexbox utilities. I've grown to love React and React Native for their reusable components, and I can find my way around a Redux store. I'm currently working on mastering MongoDB & Express for the full MERN experience!</p>
+                    <p className="wrapped-text px-md-3">I create responsive and efficient websites with HTML, CSS, and JavaScript. I am equally comfortable using external frameworks and libraries as I am styling my elements from scratch with Sass and CSS. I've grown to love React and React Native for their reusable components, and I can find my way around a Redux store for state management. I also have experience building a REST API with Express and MongoDB.</p>
                     <button className="m-auto p-4 btn btn-lg btn-accent look-button" onClick={() => props.history.push('/Projects')} >Take a Look</button>
                 </div>
             </div>
