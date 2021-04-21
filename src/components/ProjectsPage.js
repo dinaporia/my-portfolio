@@ -11,7 +11,8 @@ const Projects = () => {
         blurb: 'SmarTask Mobile provides all the standard features of a to-do list app, along with an algorithm to automatically generate a daily schedule based on user preferences. Built with React Native, this app takes advantage of Redux for state management.',
         links: {
             code: 'https://github.com/dinaporia/smartask-mobile',
-            demo: 'https://expo.io/@dinaporia/projects/smartask-mobile'
+            demo: 'https://expo.io/@dinaporia/projects/smartask-mobile',
+            video: 'https://youtu.be/kRBUzML5QmU'
         },
         cards: {
             right: {
